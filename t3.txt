@@ -1,0 +1,131 @@
+1.
+​m1 = matrix()
+    
+2.
+v1 = 1:10
+​   
+m1 = matrix(v1)
+​
+m1
+    
+3..
+    
+v1 = 1:10
+m1 = matrix(v1,2,5)
+colnames(m1) = c("c1", "c2", "c3", "c4","c5")    
+rownames(m1) = c('r1', 'r2')    
+m1
+    
+4.
+    
+v1 = 1:6
+m1 = matrix(v1,2,3)
+m2 = matrix(10:15, 2, 3)
+​madd = m1 + m2
+​msub = m1-m2
+mmul = m1*m2    
+mdiv = m1/m2
+    
+5.    
+m = matrix(1:20, 4,5)    
+m[2,3]    
+m[3,]
+m[,4]
+
+    
+6.
+​m[2,3] * m[1,2]
+​
+    
+7.
+    
+m1 = matrix(1:6,2,3)
+m2 = matrix(1:12, 4, 3)
+rbind(m1,m2)
+
+    
+8.
+
+m1 = matrix(1:8,2,4)
+m2 = matrix(1:4, 2, 2)    
+cbind(m1,m2)
+
+    
+9.    
+m1 = matrix(1:8,2,4)
+max(m1)
+min(m1)
+
+    
+10.    
+m1 = matrix(1:8,2,4)
+which(m1 == max(m1), arr.ind = TRUE)
+which(m1 == min(m1), arr.ind = TRUE)
+
+    
+Arrays
+1.
+myArr = array(1:9, dim=c(3,3,1))
+    
+2.
+myArr = array(1:24, dim=c(3,4,2))
+myArr[2,,2]
+myArr[3,3,1]
+    
+3.    
+values = 1:24
+dim(values) <- c(3,4,2)
+​
+    
+Dataframes    
+1.
+df = data.frame()
+    
+2.
+no = 1:5
+gender = c('M','M','F','M','F')
+name = c('Ali','Bakar','Catherine', 'Donald', "Elaine")
+amount = c(sample(1000:2000, 5, TRUE))    
+df = data.frame(no,name, gender, amount)
+    
+3.
+
+df["name"]
+    
+4.
+df[1:2,]
+    
+5.
+    
+df = cbind(df, age = c(34,23,56,32,36))
+  
+6.
+df = rbind(df, c(no=6, name="Morgan", gender="M", amount = 1500, age=29))
+    
+7.
+    
+df['age'] = NULL
+    
+List
+1.
+no = 1:5
+gender = c('M','M','F','M','F')
+name = c('Ali','Bakar','Catherine', 'Donald', "Elaine")
+amount = c(sample(1000:2000, 5, TRUE))
+df = data.frame(no,name, gender, amount)
+v1 = rep(TRUE,3)
+v2 = seq(1,10,2)
+sublist = list(1:10, c(TRUE, FALSE, TRUE), c("Apple", "Orange"))    
+mylist = list('a', 1, v1,v2,df,sublist)
+  
+2.    
+v1 = seq(1,10,2)
+m = matrix(1:10, 2,5)
+sublist = list(1:10, c(TRUE, FALSE, TRUE), c("Apple", "Orange"))
+mylist = list(v1,m, sublist)
+
+names(l2) = c("c","n","v1","v2","df","l","b")
+l2$c
+
+mylist[[1]]
+mylist["myMat"]
